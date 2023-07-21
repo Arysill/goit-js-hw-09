@@ -1,10 +1,5 @@
 import Notiflix from 'notiflix'
 
-
-const refs = {
-  form: document.querySelector('.form'),
-};
-
 function createPromise(pos, delay) {
   const shouldResolve = Math.random() > 0.3;
   const promise = new Promise((resolve, reject) => {
