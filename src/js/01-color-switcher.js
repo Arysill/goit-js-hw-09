@@ -6,7 +6,7 @@ const stopBtn = document.querySelector ("button [data-stop]");
 const bodyCol = document.querySelector("body");
   let timId = null;
   
-stopBtn.disabled = true;
+  stopBtn.disabled = true; 
   startBtn.addEventListener("click", playStart);
   stopBtn.addEventListener("click", playStop);
 
