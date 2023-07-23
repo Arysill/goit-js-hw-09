@@ -16,11 +16,11 @@ let timerId = null;
 const options = {
   enableTime: true,
   time_24hr: true,
-  defaultDate: new Date(),
+  defaultDate:  Date.now(),
   minuteIncrement: 1,
 
   onClose(selectedDates) {
-    const currentDate = new Date();
+    const currentDate = Date.now();
 
     if (selectedDates[0] - currentDate > 0) {
       refs.btnTimerStart.disabled = false;
@@ -56,7 +56,7 @@ function onTimerStart() {
   const selectedDate = fp.selectedDates[0];
 
   timerId = setInterval(() => {
-    const startTime = new Date();
+    const startTime = Date.now();
     const countdown = selectedDate - startTime;
     refs.btnTimerStart.disabled = true;
 
